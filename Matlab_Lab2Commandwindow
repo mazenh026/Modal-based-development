@@ -1,0 +1,61 @@
+>> %Matlab Lab2----------
+>> %%Numeric Types--------------------
+>> intVar =10;
+>> doubleVar = 2.4;
+>> disp(['The integer value is :',num2str(intVar)])
+The integer value is :10
+>> disp(['The double value is :',num2str(doubleVar)])
+The double value is :2.4
+>> %%Creating Numeric arrays-----------------------------
+>> evenNumbers =2:2:10
+
+evenNumbers =
+
+     2     4     6     8    10
+
+>> primeNumbers = [2;3;5;7;11]
+
+primeNumbers =
+
+     2
+     3
+     5
+     7
+    11
+
+>> %%Specialised Matrix Function------------------
+>> identityMatrix = eye(3)
+
+identityMatrix =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+>> magicSquare =magic(2)
+
+magicSquare =
+
+     1     3
+     4     2
+
+>> %%Matrix Concatenation-------------------------
+>> primeNumbers = primeNumbers';
+>> combinedVector = horzcat(evenNumbers,primeNumbers)
+
+combinedVector =
+
+     2     4     6     8    10     2     3     5     7    11
+
+>> magicSquare(:,3) = [5;6];
+>> combinedMatrix =vertcat(magicSquare,identityMatrix)
+
+combinedMatrix =
+
+     1     3     5
+     4     2     6
+     1     0     0
+     0     1     0
+     0     0     1
+
+>> %End_______________________

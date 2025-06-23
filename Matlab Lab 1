@@ -1,0 +1,90 @@
+>> %Matlab Lab1 Mazen Hossam
+>> %%Part1-------------------------------
+>> matrixA=[3 2 1;6 5 4;9 8 7]
+
+matrixA =
+
+     3     2     1
+     6     5     4
+     9     8     7
+
+>> matrixB=[12 11 10;15 14 13;18 17 16]
+
+matrixB =
+
+    12    11    10
+    15    14    13
+    18    17    16
+
+>> matrixSum=matrixA+matrixB
+
+matrixSum =
+
+    15    13    11
+    21    19    17
+    27    25    23
+
+>> %%Part 2 Matrix Concatenation-----------------------
+>> rowvector =1:5
+
+rowvector =
+
+     1     2     3     4     5
+
+>> columnvector=(6:10)'
+
+columnvector =
+
+     6
+     7
+     8
+     9
+    10
+
+>> columnvector =columnvector.'
+
+columnvector =
+
+     6     7     8     9    10
+
+>> horizontalConcat=horzcat(rowvector,columnvector)
+
+horizontalConcat =
+
+     1     2     3     4     5     6     7     8     9    10
+
+>> %%Part 3 Using repmat Function-------------------------
+>> matrix=[1 2;3 4]
+
+matrix =
+
+     1     2
+     3     4
+
+>> repeatedMatrix = repmat(matrix,2,2)
+
+repeatedMatrix =
+
+     1     2     1     2
+     3     4     3     4
+     1     2     1     2
+     3     4     3     4
+
+>> %%Part 4 Challenge-------------------------------
+>> identityMatrix =eye(3)
+
+identityMatrix =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+>> matrixProduct = identityMatrix*matrixA
+
+matrixProduct =
+
+     3     2     1
+     6     5     4
+     9     8     7
+
+>> %%End------------------------------------

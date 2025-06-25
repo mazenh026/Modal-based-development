@@ -1,19 +1,22 @@
 >> %Matlab Lab2----------
->> %%Numeric Types--------------------
->> intVar =10;
->> doubleVar = 2.4;
->> disp(['The integer value is :',num2str(intVar)])
-The integer value is :10
->> disp(['The double value is :',num2str(doubleVar)])
-The double value is :2.4
->> %%Creating Numeric arrays-----------------------------
->> evenNumbers =2:2:10
+%%Numeric Types--------------------
+intVar =int8(10);
+doubleVar = 2.4;
+ClassA=class(intVar);
+ClassB=class(doubleVar);
+disp(['Class of intVar is :', ClassA]);
+disp(['Class of doublevar is :',ClassB]);
+%%Creating Numeric arrays-----------------------------
+evenNumbers =2:2:10
+
+primeNumbers = [2;3;5;7;11]
+Class of intVar is :int8
+Class of doublevar is :double
 
 evenNumbers =
 
      2     4     6     8    10
 
->> primeNumbers = [2;3;5;7;11]
 
 primeNumbers =
 
@@ -24,7 +27,21 @@ primeNumbers =
     11
 
 >> %%Specialised Matrix Function------------------
->> identityMatrix = eye(3)
+identityMatrix = eye(3)
+
+magicSquare =magic(2)
+
+%%Matrix Concatenation-------------------------
+primeNumbers = primeNumbers';
+combinedVector = horzcat(evenNumbers,primeNumbers)
+
+
+magicSquare(:,3) = [5;6];
+combinedMatrix =vertcat(magicSquare,identityMatrix)
+
+
+  
+%End_______________________
 
 identityMatrix =
 
@@ -32,23 +49,17 @@ identityMatrix =
      0     1     0
      0     0     1
 
->> magicSquare =magic(2)
 
 magicSquare =
 
      1     3
      4     2
 
->> %%Matrix Concatenation-------------------------
->> primeNumbers = primeNumbers';
->> combinedVector = horzcat(evenNumbers,primeNumbers)
 
 combinedVector =
 
      2     4     6     8    10     2     3     5     7    11
 
->> magicSquare(:,3) = [5;6];
->> combinedMatrix =vertcat(magicSquare,identityMatrix)
 
 combinedMatrix =
 
@@ -58,4 +69,4 @@ combinedMatrix =
      0     1     0
      0     0     1
 
->> %End_______________________
+>> ]

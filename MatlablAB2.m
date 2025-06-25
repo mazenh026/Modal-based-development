@@ -1,11 +1,11 @@
 %Matlab Lab2----------
 %%Numeric Types--------------------
-intVar =10;
+intVar =int8(10);
 doubleVar = 2.4;
-disp(['The integer value is :',num2str(intVar)])
-
-disp(['The double value is :',num2str(doubleVar)])
-
+ClassA=class(intVar);
+ClassB=class(doubleVar);
+disp(['Class of intVar is :', ClassA]);
+disp(['Class of doublevar is :',ClassB]);
 %%Creating Numeric arrays-----------------------------
 evenNumbers =2:2:10
 

@@ -1,0 +1,24 @@
+>> Matlab_5
+Please enter two numbers
+Please enter number 1: 1
+Please enter number 2: 2
+The sum is: 3
+Please enter radius of circle: 3
+Area of the circle: 28.2743
+Please enter a row vector (e.g., [1 2 3]): [1 2 3]
+Mean = 2
+Standard Deviation = 1
+Please enter first number :1
+Please enter second number :2
+The sum of two number is :3
+Please input a choice (sqrt, cube) : sqrt
+Please enter a row vector (e.g., [1 2 3]): [1 2 3]
+Output :1      1.4142      1.7321
+Please input the base of triangle : 1
+Please input the height of triagle : 2
+The area of triangle is: 1
+Please enter a row vector (e.g., [1 2 3]): [1 2 3]
+The maximum number is :3
+The minumum number is :1
+The sum of the values is :6
+>> 

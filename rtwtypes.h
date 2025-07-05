@@ -5,7 +5,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Fri Jul  4 18:46:59 2025
+ * C/C++ source code generated on : Sat Jul  5 19:13:47 2025
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)

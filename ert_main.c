@@ -5,7 +5,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 9.9 (R2023a) 19-Nov-2022
- * C/C++ source code generated on : Fri Jul  4 18:46:59 2025
+ * C/C++ source code generated on : Sat Jul  5 19:13:47 2025
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Intel->x86-64 (Windows64)
@@ -39,7 +39,6 @@ void rt_OneStep(void)
 
   /* Check for overrun */
   if (OverrunFlag) {
-    rtmSetErrorStatus(rtM, "Overrun");
     return;
   }
 
@@ -77,13 +76,23 @@ int_T main(int_T argc, const char *argv[])
   /* Initialize model */
   untitled_initialize();
 
-  /* Simulating the model step behavior (in non real-time) to
-   *  simulate model behavior at stop time.
+  /* Attach rt_OneStep to a timer or interrupt service routine with
+   * period 0.2 seconds (base rate of the model) here.
+   * The call syntax for rt_OneStep is
+   *
+   *  rt_OneStep();
    */
-  while ((rtmGetErrorStatus(rtM) == (NULL)) && !rtmGetStopRequested(rtM)) {
-    rt_OneStep();
+  printf("Warning: The simulation will run forever. "
+         "Generated ERT main won't simulate model step behavior. "
+         "To change this behavior select the 'MAT-file logging' option.\n");
+  fflush((NULL));
+  while (1) {
+    /*  Perform application tasks here */
   }
 
+  /* The option 'Remove error status field in real-time model data structure'
+   * is selected, therefore the following code does not need to execute.
+   */
   return 0;
 }
 

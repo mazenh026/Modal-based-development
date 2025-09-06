@@ -22,7 +22,7 @@ set_param('PID_model_system_creation/Digital_PID_Controller/Error_Sum','Inputs',
 add_block('simulink/Math Operations/Gain', 'PID_model_system_creation/Digital_PID_Controller/Kp_Gain');
 set_param('PID_model_system_creation/Digital_PID_Controller/Kp_Gain', 'Gain', 'K_p');
 
-% === I Branch ===
+% I Branch 
 add_block('simulink/Math Operations/Gain', 'PID_model_system_creation/Digital_PID_Controller/Ki_Gain');
 set_param('PID_model_system_creation/Digital_PID_Controller/Ki_Gain', 'Gain', 'Ki');
 add_block('simulink/Math Operations/Gain', 'PID_model_system_creation/Digital_PID_Controller/Sample_Time');
@@ -31,7 +31,7 @@ add_block('simulink/Discrete/Unit Delay', 'PID_model_system_creation/Digital_PID
 add_block('simulink/Discrete/Unit Delay', 'PID_model_system_creation/Digital_PID_Controller/Delay2');
 add_block('simulink/Math Operations/Add','PID_model_system_creation/Digital_PID_Controller/Add1')
 set_param('PID_model_system_creation/Digital_PID_Controller/Delay2','orientation','left')
-% === D Branch ===
+% D Branch 
 add_block('simulink/Math Operations/Add', 'PID_model_system_creation/Digital_PID_Controller/Diff', 'Inputs', '-+');
 add_block('simulink/Math Operations/Gain', 'PID_model_system_creation/Digital_PID_Controller/Kd_Gain');
 set_param('PID_model_system_creation/Digital_PID_Controller/Kd_Gain', 'Gain', 'Kd');
@@ -59,3 +59,4 @@ add_line('PID_model_system_creation/Digital_PID_Controller', 'Kd_Gain/1', 'Ts_Re
 add_line('PID_model_system_creation/Digital_PID_Controller', 'Ts_Reciprocal/1', 'Sum_PID/3');
 add_line('PID_model_system_creation/Digital_PID_Controller', 'Error_Sum/1', 'Diff/2');
 add_line('PID_model_system_creation/Digital_PID_Controller', 'Sum_PID/1', 'Ctrl_Action/1');
+

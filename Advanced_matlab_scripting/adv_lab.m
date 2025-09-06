@@ -1,4 +1,4 @@
-%% Advanced Simulink Scripting Lab
+% Advanced Simulink Scripting Lab
 
 % Clear environment
 clc
@@ -72,7 +72,7 @@ set_param(modelName, 'Solver', 'ode45');
 set_param(modelName, 'StopTime', '10');
 
 %Data Logging
-% Enable signal logging for Gain output and Scope input
 
 set_param(modelName, 'SignalLogging', 'on');
+
 
